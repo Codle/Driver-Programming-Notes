@@ -24,5 +24,6 @@ static void hello_exit(void)
 }
 
 EXPORT_SYMBOL(double_paut);
+module_param(paut, int, S_IRUGO);
 module_init(hello_init);
 module_exit(hello_exit);
