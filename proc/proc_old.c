@@ -21,7 +21,7 @@ int my_proc_read(char *buf, char **start, off_t offset, int count, int *eof, voi
 static int hello_init(void)
 {
     printk("hello init\n");
-    hello_file = proc_create("hello_proc", 0, NULL, NULL);
+    hello_file = create_proc_read_entry("hello_proc", 0, NULL, my_proc_read, NULL);
     return 0;
 }
 
