@@ -14,7 +14,7 @@ int my_proc_read(char *buf, char **start, off_t offset, int count, int *eof, voi
 {
     int len = 0;
     len += sprintf(buf, "Number = %d\n", number);
-    len += sprintf(buf, "Name   = %s\n", name);
+    len += sprintf(buf+len, "Name   = %s\n", name);
     return len;
 }
 
